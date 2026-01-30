@@ -13,33 +13,34 @@ public class ScorePrinter {
             int homeworkScore,
             int examScore,
             int homeworkWeight,
-            int examWeight)
+            int examWeight) {
 
-        int totalWeight = homeworkWeight + examWeight
+        int totalWeight = homeworkWeight + examWeight;
+        System.out.println(
+                "Homework Score and Exam Score: "
+                + homeworkScore + " " + examScore
+        );
 
-        // TODO 1:
-        // Print the homework score and exam score on one line.
-        // Format:
-        // Homework Score and Exam Score: <homeworkScore> <examScore>
+        System.out.println(
+                "Homework Weight and Exam Weight: "
+                + homeworkWeight + " " + examWeight
+        );
 
-        // TODO 2:
-        // Print the homework weight and exam weight on one line.
-        // Format:
-        // Homework Weight and Exam Weight: <homeworkWeight> <examWeight>
+
 
         double homeworkPart =
-                homeworkScore * homeworkWeight / totalWeight;
+                (double) homeworkScore * homeworkWeight / totalWeight;
 
         double examPart =
-                examScore * examWeight / totalWeight;
+                (double) examScore * examWeight / totalWeight;
 
         System.out.println("Homework contribution: " + homeworkPart);
         System.out.println("Exam contribution: " + examPart);
 
         // TODO 3:
-        // Print the final score.
-        // Format:
-        // Final score: <sum of homeworkPart and examPart>
+        System.out.println(
+                "Final score: " + (homeworkPart + examPart)
+        );
     }
 }
 
